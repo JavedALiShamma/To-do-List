@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <!-- /// here we need to design the UI of the to-do List -->
+    <div class="hero-front">
+        <nav class="nav-top">
+                <img src="Logo.png" alt="">
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Enter you To-do List task">
+            <button class="add-btn"> Add <span class="material-symbols-outlined">add</span></button>
+        </div>
+        <!--  Here we need to add the status of the optiond -->
+    <div id="status-progress" class="status-list">
+        <div id="todoList" class="todoListMain"> 
+            <div class="todohead" id="todohead">
+               <div class="name-number"><p id="idTodoSection" class="section-name"> Todo</p> <badge class="number-badge mx-1">0</badge></div>
+                <p id="priority" class="priorityName">
+                    High priority
+                    <badge class="number-badge mx-1">0</badge
+                </p>
+                
+            </div>
+            <div class="conatiner-body" id="todo-body">
+                <span id="event-note" class="material-symbols-outlined">event_note</span>
+                <p> You have no toDo items as of Now</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
