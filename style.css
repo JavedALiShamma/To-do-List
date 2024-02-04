@@ -34,6 +34,7 @@
     color: white;
     background-color:#1E6F9F;
     border: none;
+    border-radius: 10px;
     align-items: center;
 }
 #status-progress{
@@ -143,6 +144,15 @@
     color: black;
     font-weight: 700;
  }
+ .editDelete{
+    width: 100px;
+
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ }
  .editDelete span{
     cursor: pointer;
+    font-size: xx-large;
  }

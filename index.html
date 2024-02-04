@@ -16,17 +16,17 @@
                 <img src="Logo.png" alt="">
         </nav>
         <div class="search-box">
-            <input type="text" placeholder="Enter you To-do List task">
+            <input class="px-2" type="text" placeholder="Enter you To-do List task">
             <button class="add-btn"> Add <span class="material-symbols-outlined">add</span></button>
         </div>
         <!--  Here we need to add the status of the optiond -->
     <div id="status-progress" class="status-list">
         <div id="todoList" class="todoListMain"> 
             <div class="todohead" id="todohead">
-               <div class="name-number"><p id="idTodoSection" class="section-name"> Todo</p> <badge id="todo-badgeID" class="number-badge mx-1">0</badge></div>
+               <div class="name-number"><p id="idTodoSection" class="section-name"> Todo</p> <badge id="todo-badgeID" class="number-badge mx-1">1</badge></div>
                 <p id="priority" class="priorityName">
                     High priority
-                    <badge  class="number-badge mx-1">0</badge
+                    <badge  class="number-badge mx-1">1</badge
                 </p>
                 
             </div>
@@ -39,15 +39,15 @@
                     <p class="nameofevent">Exercise at early morning</p>
                     <p class="duedate"> 10/12/23 </p>
                     <div class="editDelete">
-                        <span class="material-symbols-outlined">edit</span>
-                        <span class="material-symbols-outlined">delete</span>
+                        <span id="edit-btn" class="material-symbols-outlined editButton">edit</span>
+                        <span id="delete-btn" class="material-symbols-outlined delete-btn">delete</span>
                     </div>
                 </div>
             </div>
         </div>
         <div id="started" class="todoListMain"> 
             <div class="todohead" id="startedhead">
-               <div class="name-number"><p id="TodoSection" class="section-name"> Started</p> <badge class="number-badge mx-1">0</badge></div>
+               <div class="name-number"><p id="TodoSection" class="section-name"> Started</p> <badge class="number-badgeStarted mx-1">0</badge></div>
                 <p id="priority" class="priorityName">
                     High priority
                     <badge class="number-badge mx-1">0</badge
@@ -62,7 +62,7 @@
         </div>
         <div id="compelted-list" class="todoListMain"> 
             <div class="todohead" id="compltedhead">
-               <div class="name-number"><p id="idTodoSection" class="section-name"> compelted</p> <badge class="number-badge mx-1">0</badge></div>
+               <div class="name-number"><p id="idTodoSection" class="section-name"> compelted</p> <badge class="number-badgCompleted mx-1">0</badge></div>
                 <p id="priority" class="priorityName">
                     High priority
                     <badge class="number-badge mx-1">0</badge

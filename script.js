@@ -51,8 +51,10 @@
     allList.eventName=name;
     allList.dueDate=dueDate;
     allList.priority=priority;
+
     allList.state=state;
     allListofEvent[idx]=allList;
+    
     if(state=="todo-state"){
         let divAdd=document.createElement("div");
         divAdd.className="elementSeen";
@@ -64,6 +66,7 @@
             <span class="material-symbols-outlined">delete</span>
         </div>
     </div>`
+
     idx++;
     todoCount++;
     let todoBadgeID=document.querySelector("#todo-badgeID");
@@ -99,8 +102,8 @@
         <p class="nameofevent">${name}</p>
         <p class="duedate"> ${dueDate} </p>
         <div class="editDelete">
-            <span class="material-symbols-outlined">edit</span>
-            <span class="material-symbols-outlined">delete</span>
+            <span class="material-symbols-outlined editButton">edit</span>
+            <span class="material-symbols-outlined delete-btn">delete</span>
         </div>
     </div>`
     idx++;
@@ -111,5 +114,37 @@
         let container=document.querySelector("#addelComplted");
             container.appendChild(divAdd);
     }
+    let heroFront=document.querySelector(".hero-front");
+    heroFront.classList.toggle("display-off");
+    let popUp=document.querySelector(".form_popUp");
+    popUp.classList.toggle("display-off");
     /// Here now we need to add the this element in to the div
  })
+ /// Here we will add the delete and edit button
+let todoHighpriority= 0;
+let startedHighpriority= 0;
+let completedHighpriority= 0;
+for(let i=0;i<allListofEvent;i++){
+    if(allListofEvent[i].state=="todo-state" && allListofEvent[i].priority=="High priority"){
+        todoHighpriority++;
+    }
+   else if(allListofEvent[i].state=="started-state" && allListofEvent[i].priority=="High priority"){
+        startedHighpriority++;
+    }
+   else if(allListofEvent[i].state=="compelted-state" && allListofEvent[i].priority=="High priority"){
+        startedHighpriority++;
+    }
+}
+let todobadge=document.querySelector("#todo-badgeID");
+todobadge.innerHTML=todoHighpriority;
+ let numberBadge=document.querySelector(".number-badgeStarted");
+ numberBadge.innerHTML=startedHighpriority;
+ let numberBadge1=document.querySelector(".number-badgCompleted");
+ numberBadge1.innerHTML=completedHighpriority;
+ // here we will get where we click for the close
+ let deleteEle=document.querySelectorAll("#delete-btn");
+deleteEle.forEach(e=>{
+    e.addEventListener("click",function(){
+        e.parentElement.parentElement.remove();
+    })
+})
