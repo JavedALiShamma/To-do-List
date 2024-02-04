@@ -23,19 +23,83 @@
     <div id="status-progress" class="status-list">
         <div id="todoList" class="todoListMain"> 
             <div class="todohead" id="todohead">
-               <div class="name-number"><p id="idTodoSection" class="section-name"> Todo</p> <badge class="number-badge mx-1">0</badge></div>
+               <div class="name-number"><p id="idTodoSection" class="section-name"> Todo</p> <badge id="todo-badgeID" class="number-badge mx-1">0</badge></div>
+                <p id="priority" class="priorityName">
+                    High priority
+                    <badge  class="number-badge mx-1">0</badge
+                </p>
+                
+            </div>
+            <div class="conatiner-body display-off" id="todo-body">
+                <span id="event-note" class="material-symbols-outlined">event_note</span>
+                <p> You have no toDo items as of Now</p>
+            </div>
+            <div class="AddElement">
+                <div id="" class="elementSeen">
+                    <p class="nameofevent">Exercise at early morning</p>
+                    <p class="duedate"> 10/12/23 </p>
+                    <div class="editDelete">
+                        <span class="material-symbols-outlined">edit</span>
+                        <span class="material-symbols-outlined">delete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="started" class="todoListMain"> 
+            <div class="todohead" id="startedhead">
+               <div class="name-number"><p id="TodoSection" class="section-name"> Started</p> <badge class="number-badge mx-1">0</badge></div>
                 <p id="priority" class="priorityName">
                     High priority
                     <badge class="number-badge mx-1">0</badge
                 </p>
                 
             </div>
-            <div class="conatiner-body" id="todo-body">
+            <div class="conatiner-body display-off" id="started-body">
                 <span id="event-note" class="material-symbols-outlined">event_note</span>
                 <p> You have no toDo items as of Now</p>
             </div>
+            <div id="addelStarted" class="AddElement"></div>
+        </div>
+        <div id="compelted-list" class="todoListMain"> 
+            <div class="todohead" id="compltedhead">
+               <div class="name-number"><p id="idTodoSection" class="section-name"> compelted</p> <badge class="number-badge mx-1">0</badge></div>
+                <p id="priority" class="priorityName">
+                    High priority
+                    <badge class="number-badge mx-1">0</badge
+                </p>
+                
+            </div>
+            <div class="conatiner-body display-off" id="todo-body">
+                <span id="event-note" class="material-symbols-outlined">event_note</span>
+                <p> You have no toDo items as of Now</p>
+            </div>
+            <div id="addelComplted" class="AddElement"></div>
         </div>
     </div>
+    </div>
+    <!-- /// here we will have the input form of the todo List    -->
+    <div class="form_popUp display-off">
+        <form class="AddForm">
+            <span id="cancel" class="material-symbols-outlined">
+                cancel
+                </span>
+            <label for="">Name of event</label>
+            <input type="text" name="NameEvent"class="eventName" required>
+            <label for=""> Due date</label>
+            <input name="duedate" type="date" required>
+            <label for="select">Select a priority</label>
+            <select name="priority" required> 
+                <option value="low priority" class="priority"> low priority</option>
+                <option value="High priority" class="priority"> High priority</option>
+                <option value="medium priority" class="priority">medium priority</option>
+            </select>
+            <select name="state" id="" class="state">
+                <option value="todo-state">todo-state</option>
+                <option value="started-state">started-state</option>
+                <option value="completed-state">completed-state</option>
+            </select>
+            <button class="submit">Submit</button>
+        </form>
     </div>
 
 
